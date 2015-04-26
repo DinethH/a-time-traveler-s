@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="theme-color" content="#999">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/app-router/app-router.html">
+
+    <title>A Time Traveler's</title>
+</head>
+
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #333;
+        overflow: hidden;
+    }
+    
+    html /deep/ paper-dialog::shadow #scroller {
+        padding: 0;
+    }
+</style>
+
+
+<body>
+    <app-router>
+        <!-- matches an exact path -->
+        <app-route path="/**/" import="./pages/home-page.html"></app-route>
+        <app-route path="/**/opportunities" import="./pages/opportunities-page.html"></app-route>
+        <app-route path="/**/opportunity/:opportunityID" import="./pages/opportunity-page.html" bindRouter></app-route>
+        <app-route path="/**/members" import="./pages/members-page.html"></app-route>
+        <app-route path="/**/reports" import="./pages/reports-page.html"></app-route>
+        <app-route path="/**/profile" import="./pages/profile-page.html"></app-route>
+        <app-route path="/**/profile/:profileSection" import="./pages/profile-page.html" bindRouter></app-route>
+
+        <!-- matches everything else -->
+        <app-route path="*" redirect="/" import="/pages/home-page.html"></app-route>
+    </app-router>
+
+
+
+</body>
+
+</html>
