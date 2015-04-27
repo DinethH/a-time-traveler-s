@@ -1,15 +1,36 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
 
 <polymer-element name="wrapper-page" attributes="">
-  <template>
-    <link rel="stylesheet" href="wrapper-page.css">
-      
-    
-      
-  </template>
-  <script>
-      Polymer({
-        // define element prototype here
-      });
-  </script>
+    <template>
+        <link rel="stylesheet" href="wrapper-page.css">
+
+
+        <div class="main-wrapper" horizontal layout>
+            <paper-shadow flex z="2">
+                <div class="inner-wrapper" horizontal layout>
+                    <aside>
+                        <h1 class="title">A TIME TRAVELER'S</h1>
+                        
+                        <nav>
+                            <ul>
+                                <a><li><paper-item>HOME</paper-item></li></a>
+                                <a><li><paper-item>PROJECTS</paper-item></li></a>
+                                <a><li><paper-item>RESUME</paper-item></li></a>
+                                <a><li><paper-item>ABOUT</paper-item></li></a>
+                                <a><li><paper-item>CONTACT</paper-item></li></a>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <section>CONTENT</section>
+                </div>
+            </paper-shadow>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            // define element prototype here
+        });
+    </script>
 </polymer-element>
