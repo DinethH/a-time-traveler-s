@@ -1,18 +1,14 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/core-list/core-list.html">
 <link rel="import" href="../../../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../../../app/elements/project-tag/project-tag.html">
 
-<polymer-element name="project-tags" attributes="selectedPage">
+<polymer-element name="project-tags" attributes="">
     <template>
         <link rel="stylesheet" href="project-tags.css">
 
-
         <div horizontal layout wrap>
             <template repeat="{{model in data}}">
-                <div class="tag {{ {selected: selected} | tokenList }}" style="display: block;">
-                    {{model.tag}}
-                    <paper-ripple fit></paper-ripple>
-                </div>
+                <project-tag item="{{model.tag}}" selected="{{model.selected}}"></project-tag>
             </template>
         </div>
     </template>
@@ -21,22 +17,24 @@
             created: function () {
                 this.data = [
                     {
-                        tag: 'ALL'
+                        tag: 'ANDROID',
+                        selected: false
                     },
                     {
-                        tag: 'ANDROID'
+                        tag: 'iOS',
+                        selected: false
                     },
                     {
-                        tag: 'iOS'
+                        tag: 'WEB',
+                        selected: false
                     },
                     {
-                        tag: 'WEB'
+                        tag: 'ELECTRONICS',
+                        selected: false
                     },
                     {
-                        tag: 'ELECTRONICS'
-                    },
-                    {
-                        tag: 'ARDUINO'
+                        tag: 'ARDUINO',
+                        selected: false
                     },
                 ];
             }

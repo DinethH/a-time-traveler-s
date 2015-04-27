@@ -1,0 +1,23 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-ripple/paper-ripple.html">
+
+<polymer-element name="project-tag" attributes="item selected">
+    <template>
+        <link rel="stylesheet" href="project-tag.css">
+        <div class="tag {{ {selected: selected} | tokenList }}" on-tap="{{toggleItem}}">
+            {{item}}
+            <paper-ripple fit></paper-ripple>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            toggleItem: function () {
+                if (this.selected) {
+                    this.selected = false;
+                } else if (!this.selected) {
+                    this.selected = true;
+                }
+            }
+        });
+    </script>
+</polymer-element>
