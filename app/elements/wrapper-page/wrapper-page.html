@@ -20,7 +20,7 @@
                     <a href="/#/projects" class="menu-item"><paper-item class="{{ {'projects': selectedPage=='projects'}  | tokenList }}"  flex horizontal layout center center-justified>PROJECTS</paper-item></a>
                 </div>
                 <div>
-                    <a href="/#/resume" class="menu-item"><paper-item class="{{ {'resume': selectedPage=='resume'}  | tokenList }}"  flex horizontal layout center center-justified>RESUME</paper-item></a>
+                    <a target="_blank" href="../../../resume.pdf" class="menu-item"><paper-item class="{{ {'resume': selectedPage=='resume'}  | tokenList }}"  flex horizontal layout center center-justified>RESUME</paper-item></a>
                 </div>
                 <div>
                     <a href="/#/about" class="menu-item"><paper-item class="{{ {'about': selectedPage=='about'}  | tokenList }}"  flex horizontal layout center center-justified>ABOUT</paper-item></a>
@@ -31,21 +31,6 @@
             </div>
             <paper-shadow z="0"><div class="divider {{selectedPage}}-divider" flex></div></paper-shadow>
             <div class="inner-wrapper {{selectedPage}}-content">
-                <!--
-                    <aside>
-                        <h1 class="title">A TIME TRAVELER'S</h1>
-                        
-                        <nav>
-                            <ul>
-                                <a><li><paper-item>HOME</paper-item></li></a>
-                                <a><li><paper-item>PROJECTS</paper-item></li></a>
-                                <a><li><paper-item>RESUME</paper-item></li></a>
-                                <a><li><paper-item>ABOUT</paper-item></li></a>
-                                <a><li><paper-item>CONTACT</paper-item></li></a>
-                            </ul>
-                        </nav>
-                    </aside>
-                    -->
                 <section>
                     <content></content>
                 </section>
