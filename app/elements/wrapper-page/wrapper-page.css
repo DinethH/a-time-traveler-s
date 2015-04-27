@@ -20,46 +20,78 @@ h1 {
 aside {
     width: 300px;
     color: white;
-    background: #263238 ;
+    background: #263238;
     padding-top: 20px;
 }
 
-ul,li {
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
-    list-style-position:inside;
+    list-style-position: inside;
 }
 
-.title, .name {
+.title,
+.name {
     margin-left: 15px;
 }
+
 .title {
     font-size: 36px;
     margin-bottom: 60px;
 }
 
-.home, .home-divider {
-    background: #607D8B;
-}
-.projects, .projects-divider {
-    background: #FFC107;
-}
-.resume, .resume-divider {
+.home,
+.home-divider {
+    //background: #607D8B;
     background: #03A9F4;
 }
-.about, .about-divider {
+
+.projects,
+.projects-divider {
+    background: #E91E63;
+    transition: background 0.5s ease;
+}
+
+.resume,
+.resume-divider {
+    background: #607D8B;
+}
+
+.about,
+.about-divider {
     background: #4CAF50;
 }
-.contact, .contact-divider {
-    background: #E91E63;
+
+.contact,
+.contact-divider {
+    background: #FFC107;
 }
 
 .divider {
     height: 5px;
+    display: block;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .menu-item {
     color: white;
     text-decoration: none;
+}
+
+
+
+.desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-bar,
+paper-item {
+    height: 60px;
+}
+
+.menu-bar {
+    z-index: 10000;
 }

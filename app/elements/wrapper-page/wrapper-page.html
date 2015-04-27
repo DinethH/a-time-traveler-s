@@ -8,9 +8,9 @@
 
 
         <div class="main-wrapper">
-            <div horizontal layout>
+            <div horizontal layout class="desktop menu-bar">
                 <div>
-                    <paper-item>A TIME TRAVELER'S</paper-item>
+                    <paper-item flex horizontal layout center center-justified>A TIME TRAVELER'S</paper-item>
                 </div>
                 <div flex></div>
                 <div>
@@ -29,8 +29,8 @@
                     <a href="/#/contact" class="menu-item"><paper-item class="{{ {'contact': selectedPage=='contact'}  | tokenList }}"  flex horizontal layout center center-justified>CONTACT</paper-item></a>
                 </div>
             </div>
-            <div class="divider {{selectedPage}}-divider" flex></div>
-            <div class="inner-wrapper">
+            <paper-shadow z="0"><div class="divider {{selectedPage}}-divider" flex></div></paper-shadow>
+            <div class="inner-wrapper {{selectedPage}}-content">
                 <!--
                     <aside>
                         <h1 class="title">A TIME TRAVELER'S</h1>
