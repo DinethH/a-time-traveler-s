@@ -2,14 +2,36 @@
 <link rel="import" href="../../../bower_components/paper-shadow/paper-shadow.html">
 <link rel="import" href="../../../bower_components/paper-item/paper-item.html">
 
-<polymer-element name="wrapper-page" attributes="">
+<polymer-element name="wrapper-page" attributes="selectedPage">
     <template>
         <link rel="stylesheet" href="wrapper-page.css">
 
 
-        <div class="main-wrapper" horizontal layout>
-            <paper-shadow flex z="2">
-                <div class="inner-wrapper" horizontal layout>
+        <div class="main-wrapper">
+            <div horizontal layout>
+                <div>
+                    <paper-item>A TIME TRAVELER'S</paper-item>
+                </div>
+                <div flex></div>
+                <div>
+                    <a href="/#" class="menu-item"><paper-item class="{{ {'home': selectedPage=='home'}  | tokenList }}" flex horizontal layout center center-justified>HOME</paper-item></a>
+                </div>
+                <div>
+                    <a href="/#/projects" class="menu-item"><paper-item class="{{ {'projects': selectedPage=='projects'}  | tokenList }}"  flex horizontal layout center center-justified>PROJECTS</paper-item></a>
+                </div>
+                <div>
+                    <a href="/#/resume" class="menu-item"><paper-item class="{{ {'resume': selectedPage=='resume'}  | tokenList }}"  flex horizontal layout center center-justified>RESUME</paper-item></a>
+                </div>
+                <div>
+                    <a href="/#/about" class="menu-item"><paper-item class="{{ {'about': selectedPage=='about'}  | tokenList }}"  flex horizontal layout center center-justified>ABOUT</paper-item></a>
+                </div>
+                <div>
+                    <a href="/#/contact" class="menu-item"><paper-item class="{{ {'contact': selectedPage=='contact'}  | tokenList }}"  flex horizontal layout center center-justified>CONTACT</paper-item></a>
+                </div>
+            </div>
+            <div class="divider {{selectedPage}}-divider" flex></div>
+            <div class="inner-wrapper">
+                <!--
                     <aside>
                         <h1 class="title">A TIME TRAVELER'S</h1>
                         
@@ -23,9 +45,11 @@
                             </ul>
                         </nav>
                     </aside>
-                    <section>CONTENT</section>
-                </div>
-            </paper-shadow>
+                    -->
+                <section>
+                    <content></content>
+                </section>
+            </div>
         </div>
     </template>
     <script>

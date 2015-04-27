@@ -17,7 +17,7 @@
         height: 100%;
         margin: 0;
         font-family: 'Roboto', sans-serif;
-        background: #384248;
+        background: #212121;
         overflow: hidden;
     }
     
@@ -31,12 +31,10 @@
     <app-router>
         <!-- matches an exact path -->
         <app-route path="/**/" import="./pages/home-page.html"></app-route>
-        <app-route path="/**/opportunities" import="./pages/opportunities-page.html"></app-route>
-        <app-route path="/**/opportunity/:opportunityID" import="./pages/opportunity-page.html" bindRouter></app-route>
-        <app-route path="/**/members" import="./pages/members-page.html"></app-route>
-        <app-route path="/**/reports" import="./pages/reports-page.html"></app-route>
-        <app-route path="/**/profile" import="./pages/profile-page.html"></app-route>
-        <app-route path="/**/profile/:profileSection" import="./pages/profile-page.html" bindRouter></app-route>
+        <app-route path="/**/projects" import="./pages/projects-page.html"></app-route>
+        <app-route path="/**/resume" import="./pages/resume-page.html"></app-route>
+        <app-route path="/**/about" import="./pages/about-page.html"></app-route>
+        <app-route path="/**/contact" import="./pages/contact-page.html"></app-route>
 
         <!-- matches everything else -->
         <app-route path="*" redirect="/" import="/pages/home-page.html"></app-route>
