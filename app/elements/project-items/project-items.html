@@ -1,0 +1,49 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../../../bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../../../bower_components/core-image/core-image.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/core-icon/core-icon.html">
+<link rel="import" href="../../../bower_components/core-icons/core-icons.html">
+
+<polymer-element name="project-items" attributes="">
+    <template>
+        <link rel="stylesheet" href="project-items.css">
+
+        <paper-shadow>
+            <div class="project" flex horizontal layout>
+                <div flex style="margin-bottom: -4px;">
+                    <img class="project-cover" src="http://lorempixel.com/400/300/">
+                </div>
+                <div flex class="details">
+                    <div vertical layout end-justified style="height: 386px;">
+                        <div>
+                            <h2>Project Title</h2>
+                            <p>An ubi malis quem sunt, minim ex de legam quamquam in aliquip non ipsum, deserunt aute iudicem litteris. Si te elit eiusmod, excepteur o minim non litteris se ipsum ut laboris sunt arbitror quamquam. Ut id legam senserit, commodo aute veniam si minim, quibusdam aute irure nescius quid, sed multos familiaritatem, aut multos nescius sempiternum te dolor offendit proident id ab noster litteris tempor, ita nam irure laboris. Sunt efflorescere laborum nulla eiusmod.</p>
+                            <div>
+                                <span class="project-tag">tag1</span>
+                                <span class="project-tag">tag2</span>
+                                <span class="project-tag">tag3</span>
+                            </div>
+                        </div>
+                        <div flex></div>
+                        <div horizontal layout end-justified>
+                            <div>
+                                <paper-button id="moreInfoButton">
+                                    MORE INFO <core-icon icon="arrow-forward"></core-icon>
+                                </paper-button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </paper-shadow>
+    </template>
+    <script>
+        Polymer({
+
+        });
+    </script>
+</polymer-element>

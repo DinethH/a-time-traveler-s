@@ -2,11 +2,21 @@
 
 <link rel="import" href="../app/elements/wrapper-page/wrapper-page.html">
 <link rel="import" href="../app/elements/project-tags/project-tags.html">
+<link rel="import" href="../app/elements/project-items/project-items.html">
 
 <polymer-element name="projects-page">
     <template>
+        <style>
+        project-items {
+        }
+        </style>
+        
         <wrapper-page selectedPage="projects">
             <project-tags></project-tags>
+            
+            <project-items></project-items>
+            <project-items></project-items>
+            <project-items></project-items>
         </wrapper-page>
     </template>
     <script>
