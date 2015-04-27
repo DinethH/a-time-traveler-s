@@ -1,0 +1,45 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/core-list/core-list.html">
+<link rel="import" href="../../../bower_components/paper-ripple/paper-ripple.html">
+
+<polymer-element name="project-tags" attributes="selectedPage">
+    <template>
+        <link rel="stylesheet" href="project-tags.css">
+
+
+        <div horizontal layout wrap>
+            <template repeat="{{model in data}}">
+                <div class="tag {{ {selected: selected} | tokenList }}" style="display: block;">
+                    {{model.tag}}
+                    <paper-ripple fit></paper-ripple>
+                </div>
+            </template>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            created: function () {
+                this.data = [
+                    {
+                        tag: 'ALL'
+                    },
+                    {
+                        tag: 'ANDROID'
+                    },
+                    {
+                        tag: 'iOS'
+                    },
+                    {
+                        tag: 'WEB'
+                    },
+                    {
+                        tag: 'ELECTRONICS'
+                    },
+                    {
+                        tag: 'ARDUINO'
+                    },
+                ];
+            }
+        });
+    </script>
+</polymer-element>
